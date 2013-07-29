@@ -1,3 +1,5 @@
+<div class="fumbl">
+
 <p id="notice"><%= notice %></p>
 
 <h1>
@@ -8,6 +10,12 @@
   <%= @fumbl.body %>
 </div>
 
+<div class="body-clone">
+  <%= @fumbl.body %>
+</div>
+
 
 <%= link_to 'Edit', edit_fumbl_path(@fumbl) %> |
 <%= link_to 'Back', fumbls_path %>
+
+</div>

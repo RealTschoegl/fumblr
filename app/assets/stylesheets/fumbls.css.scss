@@ -2,4 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 { color: red; }
+@import "compass/css3";
+
+$show: green;
+@mixin left($dist) {
+  float: left;
+  margin-left: $dist;
+  width: 49%;
+}
+@mixin right($dist) {
+  float: right;
+  margin-right: $dist;
+  width: 49%;
+}
+
+.fumbl {
+	margin: 20px;
+	h1 { 
+		color: $show;
+	}
+	.body {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: 3px solid $show;
+		padding: 5px;
+		background-color: lighten($show, 30%);
+		@include left(10);
+		@include single-box-shadow;
+ 		@include scale(20%, false);
+ 	}
+	.body-clone {
+		@extend .body;
+		@include right(10);
+
+	}
+}
