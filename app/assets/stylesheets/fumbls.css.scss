@@ -29,7 +29,6 @@ $show: green;
 		background-color: lighten($show, 30%);
 		@include left(10);
 		@include single-box-shadow;
- 		@include scale(20%, false);
  	}
 	.body-clone {
 		@extend .body;
